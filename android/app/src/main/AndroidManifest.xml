@@ -1,7 +1,7 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.example.flutter_heads_or_tails">
-   <application
-        android:label="flutter_heads_or_tails"
+   <application 
+        android:label="Yazı Tura"
         android:name="${applicationName}"
         android:icon="@mipmap/ic_launcher">
         <activity
@@ -32,3 +32,5 @@
             android:value="2" />
     </application>
 </manifest>
+
+<!--flutter_heads_or_tails-->

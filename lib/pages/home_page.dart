@@ -1,3 +1,4 @@
+import 'dart:async';
 import 'dart:math';
 import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
@@ -18,6 +19,26 @@ class MyHomePage extends StatefulWidget {
 }
 
 class _MyHomePageState extends State<MyHomePage> {
+  final GlobalKey<FlipCardState> cardKey = GlobalKey<FlipCardState>();
+  bool _isFrontSide = true;
+
+  void _startFlipCardLoop() {
+    Timer.periodic(const Duration(seconds: 1), (timer) {
+      if (mounted) {
+        setState(() {
+          _isFrontSide = !_isFrontSide;
+        });
+        cardKey.currentState!.toggleCard();
+      }
+    });
+  }
+
+  @override
+  void initState() {
+    super.initState();
+    _startFlipCardLoop();
+  }
+
   int _countValue_1 = 0;
   int _countValue_2 = 0;
 
@@ -98,13 +119,21 @@ class _MyHomePageState extends State<MyHomePage> {
       body: Column(
         mainAxisAlignment: MainAxisAlignment.end,
         children: [
-          const FlipCard(
-            fill: Fill.fillBack,
-            direction: FlipDirection.HORIZONTAL,
-            side: CardSide.FRONT,
-            front: Image(image: AssetImage("assets/image/tura.jpeg")),
-            back: Image(image: AssetImage("assets/image/yazi.jpeg")),
-            autoFlipDuration: Duration(seconds: 1),
+          Padding(
+            padding: const EdgeInsets.all(50.0),
+            child: FlipCard(
+              key: cardKey,
+              front: const Image(image: AssetImage("assets/image/tura.jpeg")),
+              back: const Image(image: AssetImage("assets/image/yazi.jpeg")),
+              flipOnTouch: false,
+              direction: FlipDirection.HORIZONTAL,
+              speed: 500,
+              onFlipDone: (isFrontSide) {
+                setState(() {
+                  _isFrontSide = isFrontSide;
+                });
+              },
+            ),
           ),
           const Spacer(),
           Row(
@@ -308,7 +337,7 @@ class _AlertDialogHeadsTails extends StatelessWidget {
     return Padding(
       padding: ProjectPadding().showDiaologSymetric,
       child: AlertDialog(
-        backgroundColor: ProjectColor().showDialogBg,
+        backgroundColor: ProjectColor().draweBG,
         alignment: Alignment.topCenter,
         title: Text(textUp, textAlign: TextAlign.center),
         titleTextStyle: Theme.of(context).textTheme.titleLarge?.copyWith(
