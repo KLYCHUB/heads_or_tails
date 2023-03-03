@@ -117,8 +117,8 @@ class _MyHomePageState extends State<MyHomePage> {
         title: _appBarTitle(context),
       ),
       body: Column(
-        mainAxisAlignment: MainAxisAlignment.end,
         children: [
+          const Spacer(),
           Padding(
             padding: const EdgeInsets.all(50.0),
             child: FlipCard(

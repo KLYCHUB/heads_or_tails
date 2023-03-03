@@ -2,14 +2,14 @@ import 'package:flutter/cupertino.dart';
 
 class ProjectPadding {
   final EdgeInsets headsTailseAssetsSymmetric2X =
-      const EdgeInsets.symmetric(horizontal: 30, vertical: 10);
+      const EdgeInsets.symmetric(horizontal: 0, vertical: 0);
   final EdgeInsets headsTailseAssetsSymmetric =
       const EdgeInsets.symmetric(horizontal: 40, vertical: 15);
   final EdgeInsets buttonSymetirc = const EdgeInsets.symmetric(vertical: 80);
   final EdgeInsets gamePageSymetric =
       const EdgeInsets.symmetric(horizontal: 20, vertical: 20);
   final EdgeInsets showDiaologSymetric =
-      const EdgeInsets.symmetric(vertical: 80);
+      const EdgeInsets.symmetric(vertical: 75);
 }
 
 class ProjectCircular {
