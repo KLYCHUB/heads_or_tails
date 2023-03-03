@@ -9,7 +9,7 @@ class ProjectPadding {
   final EdgeInsets gamePageSymetric =
       const EdgeInsets.symmetric(horizontal: 20, vertical: 20);
   final EdgeInsets showDiaologSymetric =
-      const EdgeInsets.symmetric(vertical: 75);
+      const EdgeInsets.symmetric(vertical: 110);
 }
 
 class ProjectCircular {

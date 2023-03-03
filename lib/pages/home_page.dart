@@ -276,9 +276,7 @@ class _MyHomePageState extends State<MyHomePage> {
   BoxDecoration _boxDecoration() {
     return BoxDecoration(
       borderRadius: ProjectCircular().circular20,
-      gradient: LinearGradient(
-        colors: [ProjectColor().greyARGB, ProjectColor().whiteARGB],
-      ),
+      color: ProjectColor().whiteARGB,
     );
   }
 }
@@ -302,12 +300,7 @@ class _CounterUpdateContainer extends StatelessWidget {
       width: ProjectNumbers().counterSize,
       decoration: BoxDecoration(
         borderRadius: ProjectCircular().circular5,
-        gradient: LinearGradient(
-          colors: [
-            ProjectColor().greyARGB,
-            ProjectColor().whiteARGB,
-          ],
-        ),
+        color: ProjectColor().whiteARGB,
       ),
       child: RepaintBoundary(
         child: Text(
