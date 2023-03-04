@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_heads_or_tails/pages/home_page.dart';
+import 'package:flutter_heads_or_tails/pages/splash_screen.dart';
 import 'package:flutter_heads_or_tails/product/color/color_items.dart';
 
 void main() {
@@ -22,7 +22,7 @@ class MyApp extends StatelessWidget {
         ),
         primarySwatch: Colors.blue,
       ),
-      home: const MyHomePage(),
+      home: const SplashScreen(),
     );
   }
 }
