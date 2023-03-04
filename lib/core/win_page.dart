@@ -1,10 +1,8 @@
 import 'dart:math';
-
 import 'package:flutter/material.dart';
 import 'package:flutter_heads_or_tails/product/utils/constants.dart';
-
-import 'color/color_items.dart';
-import 'lang/langue_item.dart';
+import '../product/color/color_items.dart';
+import '../product/lang/langue_item.dart';
 
 class CustomShowDialog extends StatefulWidget {
   const CustomShowDialog({super.key});

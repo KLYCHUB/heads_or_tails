@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_heads_or_tails/product/splash_screen.dart';
 import 'package:flutter_heads_or_tails/product/color/color_items.dart';
+import 'core/splash_screen.dart';
 
 void main() {
   runApp(const MyApp());
