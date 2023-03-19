@@ -11,5 +11,6 @@ class ProjectTexts {
 class ProjectAssets {
   final String heads = "assets/image/yazi.jpeg";
   final String tails = "assets/image/tura.jpeg";
-  final String webLink = "https://www.instagram.com/yelbegensoftware/";
+  final String goglePlay = "https://play.google.com/store/apps/dev?id=6576291249346115918";
+  final String web = "https://klychub.github.io/";
 }

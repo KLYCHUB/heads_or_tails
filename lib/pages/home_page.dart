@@ -51,12 +51,12 @@ class _MyHomePageState extends State<MyHomePage> {
   AppBar _appBar(BuildContext context) {
     return AppBar(
       leading: AppBarButtonLink(
-        linkUrl: ProjectAssets().webLink,
+        linkUrl: ProjectAssets().web,
         icon: FontAwesomeIcons.circleInfo,
       ),
       actions: [
         AppBarButtonLink(
-          linkUrl: ProjectAssets().webLink,
+          linkUrl: ProjectAssets().goglePlay,
           icon: FontAwesomeIcons.googlePlay,
         )
       ],

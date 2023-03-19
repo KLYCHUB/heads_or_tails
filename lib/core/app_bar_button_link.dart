@@ -19,11 +19,13 @@ class AppBarButtonLink extends StatelessWidget {
       ),
       onPressed: () async {
         final websiteUrl = Uri.parse(linkUrl);
-        if (await canLaunchUrl(websiteUrl)) {
-          launchUrl(websiteUrl);
+        // ignore: deprecated_member_use
+        if (await canLaunch(websiteUrl.toString())) {
+          // ignore: deprecated_member_use
+          launch(websiteUrl.toString(), forceWebView: true);
         } else {
           if (kDebugMode) {
-            print("can't lahunch $websiteUrl"); //update//update
+            print("can't launch $websiteUrl");
           }
         }
       },
